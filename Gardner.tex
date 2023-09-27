@@ -1,8 +1,9 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage{fullpage, mathpazo, microtype}
+\usepackage[no-weekday]{eukdate}
 \usepackage[style=apa, terseinits=true, backend=biber, natbib=true, sorting=ynt, url=false, doi=false]{biblatex}
 \defbibenvironment{bibliography}{\enumerate}{\endenumerate}{\item}
-\defbibfilter{notbooks}{not type=book and not type=thesis}
+\defbibfilter{other}{not type=book and not type=thesis}
 \bibliography{Gardner}
 
 \begin{document}
@@ -11,9 +12,10 @@
 \maketitle
 
 
+
 \nocite{*}
 \printbibliography[heading=subbibliography, title = {PhD}, type=thesis]
 \printbibliography[heading=subbibliography, title = {Books}, type=book]
-\printbibliography[heading=subbibliography, title = {Articles}, filter=notbooks]
+\printbibliography[heading=subbibliography, title = {Articles}, filter=other]
 
 \end{document}
