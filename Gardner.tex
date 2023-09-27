@@ -1,0 +1,19 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{fullpage, mathpazo, microtype}
+\usepackage[style=apa, terseinits=true, backend=biber, natbib=true, sorting=ynt, url=false, doi=false]{biblatex}
+\defbibenvironment{bibliography}{\enumerate}{\endenumerate}{\item}
+\defbibfilter{notbooks}{not type=book and not type=thesis}
+\bibliography{Gardner}
+
+\begin{document}
+\title{Everette S Gardner Jr}
+\author{Robert Fildes, Rob J Hyndman}
+\maketitle
+
+
+\nocite{*}
+\printbibliography[heading=subbibliography, title = {PhD}, type=thesis]
+\printbibliography[heading=subbibliography, title = {Books}, type=book]
+\printbibliography[heading=subbibliography, title = {Articles}, filter=notbooks]
+
+\end{document}
