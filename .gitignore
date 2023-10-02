@@ -7,6 +7,5 @@
 *.log
 *.run.xml
 *.synctex.gz
-Gardner.pdf
 *.Rproj
 *.R
